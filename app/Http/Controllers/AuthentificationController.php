@@ -9,7 +9,7 @@ class AuthentificationController extends Controller
     //
     public function __construct()
     {
-    $this->middleware('auth')->only(['accueil']);
+    $this->middleware('auth')->only(['index1',]);
   
     }
     public function index(){
