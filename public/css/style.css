@@ -55,7 +55,7 @@ body {
         }
         
         /*Ajustement des different text*/
-     .text1{ color:white;}
+     .text1{ color:white!important;}
      .text2{ 
          color:white;
         margin-left:90px;
@@ -77,3 +77,16 @@ body {
          margin-top:41%;
          height:520px;
          }
+/*************formulaire ajouter carte***************/
+.fcontainer{
+    overflow-y:auto ;
+   
+   height: 500px;
+   width: 130%;
+   }
+
+   .mycard{
+    
+  
+    box-shadow: 0 19px 18px rgba(18, 228, 200, 0.3),0 10px 12px rgba(0, 0, 0, 0.22);
+}

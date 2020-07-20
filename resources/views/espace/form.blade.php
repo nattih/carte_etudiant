@@ -10,16 +10,14 @@
 <body>
     <div class="container-fluid">
     <section>
-        <div class="jumbotron jumbotron-fluid bg-primary p-1">
+        <div class="jumbotron jumbotron-fluid bg-warning p-1">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                    <div><a class="btn btn-success" href="{{ route('home') }}">Retour à l'accueil</a></div>
                         <h3 class="display-1 test-white">ESPACE ADMINISTRATEUR</h3>
-                        <!-- <p class="lead test-white">Ceci est une application web</p> -->
+                       
                     </div>
-                    <!-- <div class="col-md-6">
-                        <img src="" alt="">
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -35,7 +33,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -64,7 +62,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">Creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -104,7 +102,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -122,7 +120,7 @@
                      
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">Creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -145,7 +143,7 @@
                     </div>
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -156,13 +154,13 @@
                 @csrf
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <label for="nom">TUTEUR :</label>
+                            <label for="nom">NATIONALITE :</label>
                             <input type="text" name="nom" id="nom" class="form-control">
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">creer</button>
+                            <button type="submit" class="btn btn-success w-40 float-right">ajouter</button>
                         </div>
                     </div>
                 </form>
@@ -170,28 +168,7 @@
 </div>
  
 </section>
-<section>
-
-<!-- <div class="container"> -->
-<div class="row">
-            <div class="col-md-4">
-                <form  method="post" action="{{route('nation.store') }}">
-                @csrf
-                    <div class="row form-group">
-                        <div class="col-md-8">
-                            <label for="nom">NATIONALITE :</label>
-                            <input type="text" name="nom" id="nom" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-8">
-                            <button type="submit" class="btn btn-success w-40 float-right">creer</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
  
-</section>
     </div>
     <script src="{{asset('assets/vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
