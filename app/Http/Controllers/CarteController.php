@@ -13,6 +13,7 @@ use App\Cycle;
 use App\Niveau;
 use App\AnneAcademique;
 use App\Nationalite;
+use PDF;
 class CarteController extends Controller
 {
     public function list(Carte $cartes){
@@ -49,7 +50,7 @@ class CarteController extends Controller
                         'tuteur'=>$request->tuteur,
                         'photo'=>$imagePath
                     ]);             
-              return redirect()->route('carte.list')->with('succes', 'carte ajouter avec succes...');   
+              return redirect()->route('carte.list');   
             
     }
     public function supprimer(int $id){
@@ -62,5 +63,14 @@ class CarteController extends Controller
         $carte=Carte::find($id);
         return view('carte.details',compact('carte' ));
         }
+
+        //generate pdf
+    public function createPDF(){
+        $cartes=Carte::all();
+        view()->share('cartes', $cartes);
+        $pdf=PDF::loadView('carte.list', $cartes);
+        return $pdf->download('pdf_file.pdf');
+        }
+    
         
 }

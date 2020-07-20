@@ -1,0 +1,15 @@
+apres avoir cloner le projet fait une migration et configurer le mail avec:
+
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+
+MAIL_PORT=587
+MAIL_USERNAME= ...@gmail.com
+
+MAIL_PASSWORD=aeodqrmzsoswiwgz
+
+MAIL_ENCRYPTION=tls
+ 
+page authetification:
+gmail:admin@admin.com	mot de pass:password

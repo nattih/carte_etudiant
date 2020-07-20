@@ -15,6 +15,11 @@ Route::get('accueil', function () {
     return view('welcome');
 });
 
+
+Route::get('master', function () {
+    return view('layouts.master');
+});
+
 Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
@@ -43,7 +48,7 @@ Route::get('reimprimer','ReimprimerController@index')->name('reimprimer');
              /*************____[0 T 0]_____******************* 
              *                                              *
              *route pour les controller ufr et filliere et autre                                     *
-            *******************F_T_K*************************/
+            *******************Nath*************************/
            
  Route::get('/UNB/ufr/new', 'UfrController@new')->name('espace.nouveau');
  Route::post('/UNB/ufr/new', 'UfrController@store')->name('ufrs.store');
@@ -71,3 +76,14 @@ Route::get('/Carte/{carte}/details/{id}', 'CarteController@details')->name('cart
 
 //route impression
 // Route::get('/Carte/Impression', 'ImpressionController@getFilePdf')->name('carte.imprime');
+Route::get('/carte/pdf','CarteController@createPDF');
+
+             /*************____[0 T 0]_____******************* 
+             *                                              *
+             *         route pour  envoyer mail                                     *
+            *******************F_T_K*************************/
+           
+Route::get('mail','MailController@sendMailView' )->name('mail')  ;
+
+Route::post('send_mail','MailController@sendMail')->name('sendMail');
+
