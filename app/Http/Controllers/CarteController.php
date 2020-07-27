@@ -64,13 +64,30 @@ class CarteController extends Controller
         return view('carte.details',compact('carte' ));
         }
 
-        //generate pdf
-    public function createPDF(){
-        $cartes=Carte::all();
-        view()->share('cartes', $cartes);
-        $pdf=PDF::loadView('carte.list', $cartes);
-        return $pdf->download('pdf_file.pdf');
-        }
-    
+    //     //generate pdf
+    // public function createPDF(){
+    //     $carte=Carte::all();
+    //     view()->share('carte', $carte);
+    //     $pdf=PDF::loadView('carte.details', $carte);
+    //     return $pdf->download('pdf_file.pdf');
+    //     }
+
+        public function pdf($id)
+    {
+		$carte = Carte::findOrFail($id);
+    	$pdf = PDF::loadView('carte.details',compact('carte'));
+		$name='carte-'.$carte->id. ".pdf";
+		return $pdf->stream('name');
+	}
+        // public function createPDF() {
+        //     // retreive all records from db
+        //     $data = Employee::all();
+      
+        //     // share data to view
+        //     view()->share('employee',$data);
+        //     $pdf = PDF::loadView('pdf_view', $data);
+      
+        //     // download PDF file with download method
+        //     return $pdf->download('pdf_file.pdf');
         
 }

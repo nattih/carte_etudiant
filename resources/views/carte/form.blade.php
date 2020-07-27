@@ -101,7 +101,7 @@
                                 <div class="form-group">
                                         <label for="nom">Nationalité :</label>
                                         <select name="nationalites_id" class="form-control">
-                                        <option value="0" >Choisir la classe</option>
+                                        <option value="0" >Choisir la Nationalité</option>
                                         <?php $i=0; ?>
                                         @foreach($nations as $nation)
                                         <?php $i++; ?>

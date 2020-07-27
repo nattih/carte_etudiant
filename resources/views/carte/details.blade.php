@@ -18,7 +18,7 @@
         
           <div class="col-lg-3 align-items-center" data-aos="fade-left">
           <h3 style=" center;"><strong>{{$carte->nom}} {{$carte->prenom}}</strong></strong></h3><br>
-                <img src=" {{asset('storage').'/'.$carte->photo}}" style="width:300px;height:300px;" class="bf5  rounded-circle"> 
+                <img src=" {{$carte->photo}}" style="width:300px;height:300px;" class="bf5  rounded-circle"> 
           </div>
           <div class="col-lg-3 pt-4 pt-lg-4" data-aos="fade-right"><br><br>
           <h5><p class="card-text"><strong>Matricule        : </strong>{{$carte->matricule}}</p></h5>
@@ -26,12 +26,12 @@
           <h5><p class="card-text"><strong>Filiere    : </strong>  {{$carte->filiere_us->nom}}</p></h5>
           <h5><p class="card-text"><strong>Classe     : </strong>{{$carte->niveaux->nom}}  </p></h5>
           <h5><p class="card-text"><strong>Année academique    : </strong> {{$carte->anne_academiques->nom}}</p></h5>
-          <h5><p class="card-text"><strong>Classe     : </strong>{{$carte->email}}</p></h5>
-          <h5><p class="card-text"><strong>Classe     : </strong>{{$carte->nationalites->nom}}  </p></h5>
+          <h5><p class="card-text"><strong>E-mail     : </strong>{{$carte->email}}</p></h5>
+          <h5><p class="card-text"><strong>nationalite     : </strong>{{$carte->nationalites->nom}}  </p></h5>
           <h5><p class="card-text"><strong>Personne à contacter    : </strong> {{$carte->tuteur}}</p></h5><br>
-          <a class="btn btn-danger " href="{{URL::to('/carte/pdf')}}">IMPRIMER</a>
+          <a class="btn btn-danger " href="{{URL('carte/pdf',$carte)}}">IMPRIMER</a>
       </div> 
-            
+            <!-- // URL::to('/carte/pdf') -->
             </div>
              
     </section>
@@ -40,3 +40,4 @@
     </body>
             
   </html>
+

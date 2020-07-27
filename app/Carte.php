@@ -27,4 +27,8 @@ class Carte extends Model
     public function nationalites(){
         return $this->belongsTo('App\Nationalite');
     }
+public function getPhotoAttribute($photo){
+      return 'http://localhost:8000/storage/'.$photo;
 }
+}
+
