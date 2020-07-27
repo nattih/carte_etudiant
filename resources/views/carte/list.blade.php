@@ -31,7 +31,7 @@
 <td>{{$i}}</td>
 <td>{{$carte->matricule}}</td>
 <td>{{$carte->nom}} {{$carte->prenom}}</td>
-<td>{{$carte->ufrs_id}}</td>
+<td>{{$carte->ufrs->nom}}</td>
 <td>{{$carte->email}}</td>
 <td><a class="btn btn-primary" href="{{route('carte.details',['carte'=>$carte->nom,'id'=>$carte->id])}}">Détail</a></td>
 <td><a class="btn btn-dark" href="">Modifier</a></td>

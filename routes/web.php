@@ -75,8 +75,9 @@ Route::get('/Carte/{carte}/details/{id}', 'CarteController@details')->name('cart
 Route::get('/Carte/{carte}/details/{id}', 'CarteController@details')->name('carte.details');
 
 //route impression
-// Route::get('/Carte/Impression', 'ImpressionController@getFilePdf')->name('carte.imprime');
+// Route::get('/Carte/Impression', 'ImpressionController@getFilePdf')->name('pdf');
 Route::get('/carte/pdf','CarteController@createPDF');
+Route::get('carte/pdf/{carte}','CarteController@pdf');
 
              /*************____[0 T 0]_____******************* 
              *                                              *

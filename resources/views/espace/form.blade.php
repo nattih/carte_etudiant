@@ -150,7 +150,7 @@
             </div>
 
             <div class="col-md-4">
-                <form  method="post" action="{{route('tuteur.store') }}">
+                <form  method="post" action="{{route('nation.store') }}">
                 @csrf
                     <div class="row form-group">
                         <div class="col-md-8">
